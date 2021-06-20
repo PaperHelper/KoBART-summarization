@@ -13,10 +13,12 @@ class KoBARTSummaryDataset(Dataset):
         self.tok = tok
         self.max_len = max_len
         self.docs = pd.read_csv(file, sep='\t')
+        self.docs = self.docs.dropna()
         self.len = self.docs.shape[0]
         self.pad_index = pad_index
         self.ignore_index = ignore_index
-
+        
+        
     def add_padding_data(self, inputs):
         if len(inputs) < self.max_len:
             pad = np.array([self.pad_index] *(self.max_len - len(inputs)))
@@ -37,7 +39,8 @@ class KoBARTSummaryDataset(Dataset):
     
     def __getitem__(self, idx):
         instance = self.docs.iloc[idx]
-        input_ids = self.tok.encode(instance['news'])
+        # input_ids = self.tok.encode(instance['news'])
+        input_ids = self.tok.encode(instance['paper'])
         input_ids = self.add_padding_data(input_ids)
 
         label_ids = self.tok.encode(instance['summary'])
