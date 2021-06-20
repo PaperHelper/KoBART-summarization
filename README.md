@@ -22,6 +22,7 @@ pytorch-lightning==1.1.0
 streamlit==0.72.0
 ```
 ## Data
+### Dacon 한국어 문서 생성요약 AI 경진대회
 - [Dacon 한국어 문서 생성요약 AI 경진대회](https://dacon.io/competitions/official/235673/overview/) 의 학습 데이터를 활용함
 - 학습 데이터에서 임의로 Train / Test 데이터를 생성함
 - 데이터 탐색에 용이하게 tsv 형태로 데이터를 변환함
@@ -34,6 +35,7 @@ streamlit==0.72.0
 |-------|--------:|
 | 뉴스원문| 요약문 |  
 
+### AI Hub 논문요약 데이터셋
 - [AI Hub 한국어 논문요약 데이터셋](https://aihub.or.kr/aidata/30712) 의 데이터를 활용함
 - 학습 데이터의 summary_entire, summary_section의 original_text, summary_text 활용
 - Data 구조
