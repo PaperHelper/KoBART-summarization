@@ -112,7 +112,7 @@ python train.py  --train_file='data/aihub_train.tsv' --test_file='data/aihub_tes
   
 | | rouge-1 |rouge-2|rouge-l|
 |-------|--------:|--------:|--------:|
-| Precosion| 0.515 | 0.351|0.415|
+| Precision| 0.515 | 0.351|0.415|
 | Recall| 0.538| 0.359|0.440|
 | F1| 0.505| 0.340|0.415|
 
